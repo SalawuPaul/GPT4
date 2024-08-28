@@ -10,14 +10,14 @@ using System.Threading.Tasks;
 
 namespace GPT4.Bots
 {
-    public class EchoBot : ActivityHandler
+    public class GPT4Bot : ActivityHandler
     {
 
         private readonly IOpenAIService _openAIService;
         private UserState _userstate;
         private ConversationState _conversationState;
 
-        public EchoBot(IOpenAIService openAIService, UserState userState, ConversationState conversationState)
+        public GPT4Bot(IOpenAIService openAIService, UserState userState, ConversationState conversationState)
         {
             _openAIService = openAIService;
             _userstate = userState;
