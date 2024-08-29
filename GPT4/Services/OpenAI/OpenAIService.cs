@@ -27,7 +27,7 @@ namespace GPT4.Services.OpenAI
                      new ChatRequestSystemMessage("Be as friendly as possible"),
                      new ChatRequestUserMessage(message)
                 },
-                MaxTokens = 300,
+                MaxTokens = 3000,
             };
             if (chatMessages != null)
             {
