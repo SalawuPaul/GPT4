@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy ASP.Net Core app to Azure Web App - Infinionagentwebapp
+name: Build and deploy ASP.Net Core app to Azure Web App - InfinionAgentwebapp
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: 'v6.0'
+          dotnet-version: '8.x'
 
       - name: Build with dotnet
         run: dotnet build --configuration Release
@@ -51,15 +51,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_C0D08E60BBBB46A1902733C90204E84D }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_07C51E39A1DF4104B554F36349E92C0A }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_C2A9CE6EB565416CBDA16A8347E81B1A }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_9CD914AF6E6A42A3A9EB08FA498A7469 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_177F824D50BC4855AA09AF2A4D01BFDB }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_056AA59CF405451D93D0FACCDF8A17A4 }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'Infinionagentwebapp'
+          app-name: 'InfinionAgentwebapp'
           slot-name: 'Production'
           package: .
           
